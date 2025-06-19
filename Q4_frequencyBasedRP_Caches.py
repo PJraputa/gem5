@@ -80,7 +80,7 @@ class L3Cache(Cache):
     mshrs = 32
     tgts_per_mshr = 24
     write_buffers = 16
-    replacement_policy = LFURP()
+    replacement_policy = LFURP() #這裏改動了替換策略
 
 class IOCache(Cache):
     assoc = 8
