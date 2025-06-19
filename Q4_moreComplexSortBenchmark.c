@@ -28,26 +28,11 @@ void quickSort(int number[], int left, int right) {
 int main(){
  
 
-    int size = 500000;
-
-    int* arr = (int*)malloc(size * sizeof(int));
-    if (arr == NULL) {
-        perror("Failed to allocate memory for array");
-        return 1;
+   int arr[300000];
+	int size = 300000;
+	for (int i = 0; i < size; i++){
+		arr[i] = rand() % size + 1;
     }
-
-    srand(time(NULL));
-
-    for (int i = 0; i < size; i++){
-        arr[i] = rand() % size + 1;
-    }
-
-    quickSort(arr, 0, size-1);
-
-    free(arr);
-    arr = NULL;
-
-    return 0; 
-
+	quickSort(arr, 0, size-1); 
 }
 
